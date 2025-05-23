@@ -1,0 +1,70 @@
+@import 'normalize.css';
+@import './variables';
+@import '../styles/breakpoints';
+
+@font-face {
+    font-family: 'K2D';
+    font-style: normal;
+    font-weight: 800;
+    src: url("../fonts/K2D-ExtraBold.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/Inter-Regular.woff") format("woff");
+  }
+
+
+  @font-face {
+    font-family: 'Inter-Bold';
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/Inter-Bold.woff") format("woff");
+  }
+  
+body {
+    background-color: $color-1;
+    color: $color-2;
+    font-size: 20px;
+    font-family: 'Inter';
+
+    @include screen-lt("md") {
+      font-size: 18px;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'K2D';
+    margin: 0;
+}
+
+p {
+    margin-bottom: 0;
+}
+
+.box {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 1440px;
+    padding-left: 108px;
+    padding-right: 108px;
+    box-sizing: border-box;
+
+    @include screen-lt("xl") {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+
+    @include screen-lt("md") {
+      padding-left: 20px;
+      padding-right: 20px;
+  }
+}

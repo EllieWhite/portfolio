@@ -1,0 +1,20 @@
+@import '@/styles/breakpoints';
+
+.box {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    position: fixed;
+    right: 100px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+
+    @include screen-lt("xl") {
+        right: 60px;
+    }
+
+    @include screen-lt("md") {
+        right: 20px;
+    }
+}

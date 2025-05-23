@@ -19,6 +19,11 @@ export function buildLoaders(options: BuildOptions): ModuleOptions['rules'] {
         type: 'asset/resource',
     }
 
+    const fontLoader = {
+        test: /\.(woff|woff2)$/,
+        type: 'asset/resource',
+    }
+
     const svgrLoader = {
         test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
         issuer: /\.[jt]sx?$/,
@@ -42,14 +47,38 @@ export function buildLoaders(options: BuildOptions): ModuleOptions['rules'] {
         ],
     }
 
-    const scssLoader =  {
-        test: /\.s[ac]ss$/i,
+    const scssModuleLoader =  {
+        test: /\.module\.s[ac]ss$/i,
         use: [
           isDev ? 'style-loader': MiniCssExtractPlugin.loader,
           cssLoaderWithModules,
           "sass-loader",
         ],
     }
+
+    const scssLoader =  {
+        test: /\.s[ac]ss$/i,
+        exclude: /\.module\.s[ac]ss$/i,
+        use: [
+          isDev ? 'style-loader': MiniCssExtractPlugin.loader,
+          "css-loader",
+          "sass-loader",
+        ],
+    }
+
+    const fileLoader = {
+        test: /\.pdf$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'assets/pdf/',
+              publicPath: '/assets/pdf/',
+            },
+          },
+        ],
+      }
 
     // const tsLoader = {
     //     test: /\.tsx?$/,
@@ -72,9 +101,12 @@ export function buildLoaders(options: BuildOptions): ModuleOptions['rules'] {
 
 
     return [
+        scssModuleLoader,
         scssLoader,
         tsLoader,
         assetLoader,
-        svgrLoader
+        svgrLoader,
+        fontLoader,
+        fileLoader
     ]
 }

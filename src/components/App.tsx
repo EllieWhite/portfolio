@@ -1,13 +1,13 @@
-import { Outlet } from 'react-router-dom';
-import styles from './App.module.scss';
-import Cat from '@/assets/i.webp';
+import './App.scss';
+
+import Greeting from "./greeting/greeting";
+
 
 const App = () => {
     return (
-        <div className={styles.block}>
-            <img src={Cat} alt="" />
-        <Outlet />
-        </div>
+        <>
+            <Greeting />
+        </>
     )
 }
 
