@@ -1,0 +1,210 @@
+@import './../variables';
+@import './../mixins';
+@import '@/styles/breakpoints.scss';
+
+.about {
+    padding-top: 178px;
+    padding-bottom: 178px;
+    position: relative;
+
+    @include screen-lt("lg") {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    &:before {
+        @include decore($content: true, $h: 64.1%, $w: 26.6%, $t: 4.7%, $r: calc(100% + 8.7%), $brdr: 800px);
+        background-color: $color-2;
+        filter: blur(800px);
+    }
+
+    &:after {
+        @include decore($content: true, $h: 64.1%, $w: 40.3%, $r: calc(100% + 1.94%), $t: 88%, $brdr: 800px);
+        background-color: $color-2;
+        filter: blur(800px);
+    }
+}
+
+
+.decor_1 {
+    @include decore($h: 38.1%, $w: 52.8%, $t: 26.3%, $r: -24.5%, $brdr: 200px);
+    filter: blur(200px);
+    background: linear-gradient(273deg, rgba(3, 104, 255, 0.45) 0%, rgba(116, 55, 246, 0.45) 37.1%, rgba(246, 141, 255, 0.45) 100%);
+}
+
+.decor_2 {
+    @include decore($h: 38.1%, $w: 52.8%, $b: 13.5%, $r: -10.9%);
+    &:before {
+        @include decore($content: true, $h: 100%, $w: 100%, $b: 0, $r: 0, $brdr: 200px);
+        filter: blur(200px);
+        background: linear-gradient(273deg, rgba(245, 201, 116, 0.45) 0%, rgba(242, 55, 246, 0.45) 22.5%, rgba(246, 181, 55, 0.45) 22.51%, rgba(242, 55, 246, 0.45) 47.5%, rgba(246, 141, 255, 0.45) 100%);
+    }
+}
+
+.decor_3 {
+    @include decore($h: 12.2vw, $w: 14.8vw, $r: 2.6%, $b: -8.34%);
+    background: url(../../assets/dots.svg) top center/contain no-repeat;
+    z-index: 2;
+    opacity: 0.6;
+
+    @include screen-lt("lg") {
+        right: initial;
+        left: 8vw;
+        bottom: initial;
+        top: 30vw;
+    }
+
+    @include screen-lt("md") {
+        top: 40vw;
+    }
+}
+
+.decor_4 {
+    @include decore($h: 38.1%, $w: 52.8%, $b: 0, $l: -34.5%, $brdr: 200px);
+    filter: blur(200px);
+    transform: rotate(-90deg);
+    background: linear-gradient(273deg, rgba(3, 104, 255, 0.45) 0%, rgba(116, 55, 246, 0.45) 37.1%, rgba(246, 141, 255, 0.45) 100%);
+}
+
+.photoBox {
+    border-radius: 50%;
+    width: 39.9vw;
+    max-width: 575px;
+    aspect-ratio: 1/1;
+    position: relative;
+
+    @include screen-lt("lg") {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.photo {
+    width: 100%;
+    height: auto;
+}
+
+.smallBall {
+    bottom: 7%;
+    left: 1.56%;
+    width: 20.8%;
+    height: 18.71%;
+
+    @include screen-lt("lg") {
+        bottom: 80%;
+    }
+}
+
+.wrap {
+    margin-left: -60px;
+    margin-bottom: 164px;
+    max-width: 34em;
+    z-index: 2;
+    @include screen-lt("lg+") {
+        max-width: 26em;
+        margin-bottom: 100px;
+    }
+
+    @include screen-lt("lg") {
+        margin-left: auto;
+        margin-top: -10vw;
+        margin-bottom: 0;
+    }
+
+}
+.textContent {
+    font-family: 'Inter-Medium';
+    line-height: 1.75;
+    letter-spacing: 0.05em;
+   
+    @include screen-lt("lg") {
+        line-height: 1.5;
+    }
+}
+
+.contentBox {
+    display: flex;
+    align-items: flex-end;
+
+
+  @include screen-lt("lg") {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+.btnContact {
+    display: inline-block;
+    top: 179px;
+    margin-left: 10vh;
+    text-decoration: none;
+    color: inherit;
+    font-family: 'Inter-Bold';
+    font-size: 24px;
+    padding: 14px 33px;
+    border-radius: 50px;
+    background-color: $color-3;
+    animation: moveInBottom 5s ease-out;
+    animation-fill-mode: backwards;
+    position: relative;
+    transition: all .2s;
+
+    @include screen-lt("lg+") {
+        top: 114px;
+    }
+
+    @include screen-lt("lg") {
+        top: 0;
+        margin-top: 50px;
+        margin-left: 0;
+      }
+
+      @include screen-lt("md") {
+        font-size: 20px
+      }
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+
+        &:after {
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+        }
+    }
+
+    &:active {
+        transform: translateY(-1px);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    &::after {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 50px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        background-color: inherit;
+        transition: all .7s;
+    }
+
+
+    
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}

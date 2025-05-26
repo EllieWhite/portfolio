@@ -1,0 +1,126 @@
+@import './../variables';
+@import './../mixins';
+@import '../../styles/breakpoints.scss';
+
+.title {
+    font-weight: 600;
+    font-size: 143px;
+    letter-spacing: 0.05em;
+    text-align: center;
+
+    @include screen-lt("lg") {
+        font-size: 100px;
+        text-align: left;
+    }
+
+    @include screen-lt("md") {
+        font-size: 10vw
+    }
+}
+
+.skills {
+    padding-top: 108px;
+    padding-bottom: 108px;
+    position: relative;
+    
+    @include screen-lt("md") {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    &:before {
+        @include decore($content: true, $h: 35.3%, $w: 40.9%, $l: -10.6%,  $t: 13.4%, $brdr: 200px);
+        filter: blur(200px);
+        background: linear-gradient(273deg, rgba(245, 201, 116, 0.45) 0%, rgba(242, 55, 246, 0.45) 22.5%, rgba(246, 181, 55, 0.45) 22.51%, rgba(242, 55, 246, 0.45) 47.5%, rgba(246, 141, 255, 0.45) 100%);
+        will-change: transform;
+        transform: rotate(78deg);
+    }
+
+    &:after {
+        @include decore($content: true, $h: 35.3%, $w: 40.9%, $l: -9.6%,  $t: 36.4%, $brdr: 200px);
+        filter: blur(200px);
+        background: linear-gradient(273deg, rgba(3, 104, 255, 0.46) 0%, rgba(116, 55, 246, 0.76) 37.1%, rgba(246, 141, 255, 0) 100%);       
+        will-change: transform;
+        transform: rotate(140deg);
+    }
+}
+
+.skillsList {
+    margin-top: 139px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px 94px;
+    justify-content: center;
+
+    @include screen-lt("lg+") {
+        margin-top: 100px;
+    }
+
+    @include screen-lt("md") {
+        margin-top: 40px;
+    }
+}
+
+.skillsItem {
+    width: calc(50% - 47px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 15px;
+
+    @include screen-lt("lg+") {
+        width: calc(50% - 60px);
+    }
+
+    @include screen-lt("lg") {
+        width: 100%;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        row-gap: 10px;
+    }
+
+}
+
+.skillsPanel {
+    display: flex;
+    gap: 22px;
+    @include screen-lt("lg") {
+        gap: 15px;
+    }
+
+}
+
+.skillsElem {
+    border-radius: 100%;
+    background-color: $color-4;
+    width: 19px;
+    height: 19px;
+    border-radius: 50%;
+    opacity: 0.2;
+
+    &.isActive {
+        opacity: 1;
+    }
+}
+
+.skillsTitle {
+    margin: 0;
+    font-size: 32px;
+
+    @include screen-lt("lg") {
+        width: 300px;
+        font-size: 22px;
+    }
+}
+
+.decor_1 {
+    @include decore($h: 609px, $w: 383px, $l: 100%, $b: -40%, $brdr: 800px);
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    background-color: $color-2;
+    -webkit-filter: blur(800px);
+            filter: blur(800px);
+    opacity: 0.5;
+    will-change: transform;
+}

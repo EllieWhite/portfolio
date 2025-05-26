@@ -4,15 +4,18 @@ import styles from './socialElem.module.scss';
 interface SocialElemProps {
   href: string;
   children: React.ReactNode;
+  className?: string;
 }
 
-const SocialElem: React.FC<SocialElemProps> = ({ href, children }) => {
+const SocialElem: React.FC<SocialElemProps> = ({ href, children, className }) => {
+
+
     if (!href) {
         return null;
     }
 
     return (
-        <a href={href} target='_blank' rel="noopener noreferrer" className={styles.socialElem}>
+        <a href={href} target='_blank' rel="noopener noreferrer" className={className}>
             {children}
         </a>
     );

@@ -5,7 +5,6 @@
 .greeting {
     height: 100vh;
     position: relative;
-    overflow: hidden;
 
     &:before {
         @include decore($content: true, $h: 609px, $w: 383px, $r: 100%, $t: 50%, $brdr: 800px);
