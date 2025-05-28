@@ -1,7 +1,8 @@
 @mixin decore($content: null, $h, $w, $r: null, $l: null, $t: null, $b: null, $brdr: null) {
     position: absolute;
     display: block;
-
+    will-change: transform;
+    
     @if $content {
         content: '';
     }

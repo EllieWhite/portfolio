@@ -6,6 +6,10 @@
     height: 100vh;
     position: relative;
 
+    @include screen-lt("md") {
+        height: auto;
+    }
+
     &:before {
         @include decore($content: true, $h: 609px, $w: 383px, $r: 100%, $t: 50%, $brdr: 800px);
         -webkit-transform: translateY(-50%);
@@ -15,11 +19,17 @@
         -webkit-filter: blur(800px);
                 filter: blur(800px);
         opacity: 0.5;
-        will-change: transform;
     }
 
     &:after {
         @include decore($content: true, $h: 362px, $w: 761px, $r: -150px, $t: -75px, $brdr: 200px);
+        background: -o-linear-gradient(
+        left,
+        #032CFF 0%,
+        #378FF6 37%,
+        #378FF6 76%,
+        #7E91F3 100%
+        );
         background: -webkit-gradient(
         linear,
         left top, right top,
@@ -27,13 +37,6 @@
         color-stop(37%, #378FF6),
         color-stop(76%, #378FF6),
         to(#7E91F3)
-        );
-        background: -o-linear-gradient(
-        left,
-        #032CFF 0%,
-        #378FF6 37%,
-        #378FF6 76%,
-        #7E91F3 100%
         );
         background: linear-gradient(
         to right,
@@ -46,7 +49,6 @@
                 filter: blur(200px);
       
         opacity: 0.5;
-        will-change: transform;
 
         @include screen-lt("md") {
             width: 100%;
@@ -58,6 +60,13 @@
 
 .decore_1 {
     @include decore($h: 362px, $w: 761px, $r: -192px, $t: 224px);
+    background: -o-linear-gradient(
+    left,
+    #8103FF 0%,
+    #8103FF 37%,
+    #BF83FB 100%,
+    #d6bcf0 100%
+    );
     background: -webkit-gradient(
     linear,
     left top, right top,
@@ -65,13 +74,6 @@
     color-stop(37%, #8103FF),
     color-stop(100%, #BF83FB),
     to(#d6bcf0)
-    );
-    background: -o-linear-gradient(
-    left,
-    #8103FF 0%,
-    #8103FF 37%,
-    #BF83FB 100%,
-    #d6bcf0 100%
     );
     background: linear-gradient(
     to right,
@@ -83,7 +85,6 @@
     -webkit-filter: blur(200px);
             filter: blur(200px);
     opacity: 0.5;
-    will-change: transform;
 
 
     @include screen-lt("md") {
@@ -96,6 +97,13 @@
 
 .decore_2 {
     @include decore($h: 362px, $w: 761px, $r: -221px, $t: 405px);
+    background: -o-linear-gradient(
+    left,
+    #EB03FF 0%,
+    #F237F6 37%,
+    #BF83FB 76%,
+    #F68DFF 100%
+    );
     background: -webkit-gradient(
     linear,
     left top, right top,
@@ -103,13 +111,6 @@
     color-stop(37%, #F237F6),
     color-stop(76%, #BF83FB),
     to(#F68DFF)
-    );
-    background: -o-linear-gradient(
-    left,
-    #EB03FF 0%,
-    #F237F6 37%,
-    #BF83FB 76%,
-    #F68DFF 100%
     );
     background: linear-gradient(
     to right,
@@ -121,7 +122,6 @@
     -webkit-filter: blur(200px);
             filter: blur(200px);
     opacity: 0.5;
-    will-change: transform;
 
     @include screen-lt("md") {
         width: 100%;
@@ -133,6 +133,14 @@
 
 .decore_3 {
     @include decore($h: 362px, $w: 761px, $r: -168px, $b: -35px);
+    background: -o-linear-gradient(
+    left,
+    #F5C974 0%,
+    #F237F6 22%,
+    #F6B537 23%,
+    #F237F6 47%,
+    #F68DFF 100%
+    );
     background: -webkit-gradient(
     linear,
     left top, right top,
@@ -141,14 +149,6 @@
     color-stop(23%, #F6B537),
     color-stop(47%, #F237F6),
     to(#F68DFF)
-    );
-    background: -o-linear-gradient(
-    left,
-    #F5C974 0%,
-    #F237F6 22%,
-    #F6B537 23%,
-    #F237F6 47%,
-    #F68DFF 100%
     );
     background: linear-gradient(
     to right,
@@ -161,7 +161,6 @@
     -webkit-filter: blur(200px);
             filter: blur(200px);
     opacity: 0.5;
-    will-change: transform;
 
      @include screen-lt("md") {
         width: 100%;

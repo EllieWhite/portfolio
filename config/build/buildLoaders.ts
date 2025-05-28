@@ -80,6 +80,14 @@ export function buildLoaders(options: BuildOptions): ModuleOptions['rules'] {
         ],
       }
 
+      const videoLoader = {
+        test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)$/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'static/media/[name].[hash][ext]'
+        }
+    }
+
     // const tsLoader = {
     //     test: /\.tsx?$/,
     //     use: 'ts-loader',
@@ -107,6 +115,7 @@ export function buildLoaders(options: BuildOptions): ModuleOptions['rules'] {
         assetLoader,
         svgrLoader,
         fontLoader,
-        fileLoader
+        fileLoader,
+        videoLoader
     ]
 }

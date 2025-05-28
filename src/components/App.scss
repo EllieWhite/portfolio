@@ -81,7 +81,8 @@ p {
     max-width: 1440px;
     padding-left: 108px;
     padding-right: 108px;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     position: relative;
     z-index: 10;
 

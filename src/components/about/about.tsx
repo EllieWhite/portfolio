@@ -7,10 +7,10 @@ import SocialElem from '../social/socialElem/socialElem';
 const About = () => {
     return (
         <section className={styles.about}>
-            <span className={styles.decor_1}></span>
-            <span className={styles.decor_2}></span>
-            <span className={styles.decor_3}></span>
-            <span className={styles.decor_4}></span>
+            <span className={styles.decore_1}></span>
+            <span className={styles.decore_2}></span>
+            <span className={styles.decore_3}></span>
+            <span className={styles.decore_4}></span>
             <div className='box'>
                 <div className={styles.contentBox}>
                     <div className={styles.photoBox}>

@@ -31,7 +31,7 @@ const skills = [
     activeCount: 3,
   },
   {
-    title: 'Javascript',
+    title: 'JavaScript',
     activeCount: 4,
   },
   {
@@ -51,7 +51,7 @@ const skills = [
 const Skills = () => {
     return (
       <section className={styles.skills}>
-        <div className={styles.decor_1}></div>
+        <span className={styles.decore_1}></span>
         <div className="box">
           <h2 className={styles.title}>Мои навыки</h2>
           <ul className={styles.skillsList}>

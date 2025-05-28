@@ -5,9 +5,9 @@ const Greeting = () => {
 
     return (
         <section className={styles.greeting}>
-            <div className={styles.decore_1}></div>
-            <div className={styles.decore_2}></div>
-            <div className={styles.decore_3}></div>
+            <span className={styles.decore_1}></span>
+            <span className={styles.decore_2}></span>
+            <span className={styles.decore_3}></span>
             <div className={`${styles.box} box`}>
                 <div className={styles.about}>
                     <h1 className={styles.title_1}>Diana</h1>
