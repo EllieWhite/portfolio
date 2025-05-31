@@ -10,8 +10,8 @@ const Greeting = () => {
             <span className={styles.decore_3}></span>
             <div className={`${styles.box} box`}>
                 <div className={styles.about}>
-                    <h1 className={styles.title_1}>Diana</h1>
-                    <p className={styles.text}>Я Frontent-разработчик и&#160;работаю удаленно из&#160;Ростова-на-Дону</p>
+                    <h1 className={styles.title_1}>Hello!</h1>
+                    <p className={styles.text}>Меня зовут Диана и&#160;я&#160;Frontent-разработчик, работаю удаленно из&#160;Ростова-на-Дону</p>
                 </div>
                 <Social />
                 <Ball/>
