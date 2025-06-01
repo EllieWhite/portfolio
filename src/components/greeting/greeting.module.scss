@@ -6,7 +6,7 @@
     height: 100vh;
     position: relative;
 
-    @include screen-lt("md") {
+    @include screen-lt("lg+") {
         height: auto;
     }
 
@@ -238,5 +238,12 @@
             -ms-flex-align: start;
                 align-items: flex-start;
         row-gap: 30px;
+        padding-top: 25vw;
       }
+}
+
+.socialDesktop {
+    @include screen-lt("lg") {
+        display: none;
+    }
 }

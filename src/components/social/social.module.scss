@@ -21,7 +21,10 @@
         right: 60px;
     }
 
-    @include screen-lt("md") {
-        right: 20px;
+    @include screen-lt("lg") {
+        flex-direction: row;
+        position: static;
+        column-gap: 30px;
+        transform: none;
     }
 }

@@ -22,7 +22,7 @@ const About = () => {
                             Более 4-х лет коммерческого опыта во&#160;фронтенд&#8209;разработке. Создаю функциональные, оптимизированные цифровые решения с&#160;использованием подхода mobile&#8209;first, Pixel Perfect 
                             и&#160;многое другое.
                         </p>
-                        <SocialElem href='https://telegram.me/ElllieWhite' className={`${styles.btnContact}`}>Contact Me</SocialElem>
+                        <SocialElem href='https://telegram.me/ElllieWhite' className={`${styles.btnContact}`} isContact>Contact Me</SocialElem>
                     </div>
                 </div>
             </div>

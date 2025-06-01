@@ -43,7 +43,7 @@ const skills = [
     activeCount: 5,
   },
   {
-    title: 'Material UI',
+    title: 'CSS in JS',
     activeCount: 7,
   }
 ];

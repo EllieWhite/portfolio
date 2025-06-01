@@ -7,10 +7,30 @@
 }
 
 .navList {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    column-gap: 43px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-column-gap: 43px;
+       -moz-column-gap: 43px;
+            column-gap: 43px;
     height: 100%;
+
+    @include screen-lt("lg") {
+        -webkit-column-gap: 20px;
+           -moz-column-gap: 20px;
+                column-gap: 20px
+    }
+
+    @include screen-lt("md") {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        row-gap: 25px;
+    }
 }
 
 .navItem {
@@ -19,12 +39,21 @@
         content: '';
         position: absolute;
         left: 50%;
-        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+                transform: translateX(-50%);
         width: 0;
         height: 4px;
         border-radius: 50px;
         background: rgba(242, 55, 246, 0.76);
         top: calc(100% + 20px);
+        -webkit-transition: .367s cubic-bezier(.55,0,.1,1);
+        -o-transition: .367s cubic-bezier(.55,0,.1,1);
+        transition: .367s cubic-bezier(.55,0,.1,1);
+
+        @include screen-lt("md") {
+            top: calc(100% + 10px);
+        }
     }
 
     &.active {
@@ -39,23 +68,28 @@
     border: none;
     cursor: pointer;
     overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     position: relative;
+    color: inherit;
 
     &:hover .navElemText {
-        transform: translateY(-100%);
+        -webkit-transform: translateY(-100%);
+            -ms-transform: translateY(-100%);
+                transform: translateY(-100%);
     }
 
 }
 
 .navElemText {
-    font-family: 'Inter-Bold';
     font-size: 16px;
-    color: $color-2;
     background-color: transparent;
     border: none;
     cursor: pointer;
     position: relative;
+    -webkit-transition: .367s cubic-bezier(.55,0,.1,1);
+    -o-transition: .367s cubic-bezier(.55,0,.1,1);
     transition: .367s cubic-bezier(.55,0,.1,1);
 
     &:before {
@@ -69,14 +103,135 @@
     position: fixed;
     top: 34px;
     left: 50%;
-    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
     border-radius: 50px;
     max-width: 1242px;
-    width: 100%;
+    width: calc(100% - 60px);
     height: 95px;
-    backdrop-filter: blur(285px);
+    -webkit-backdrop-filter: blur(285px);
+            backdrop-filter: blur(285px);
     background: rgba(0,0,0, 0.2);
-    z-index: 100;
+    z-index: 99;
     padding: 0 40px;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    font-family: 'Inter-Bold';
+    color: $color-2;
+
+
+    @include screen-lt("lg") {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
+        row-gap: 40px;
+        top: 20px;
+        left: 20px;
+        width: calc(100% - 40px);
+        border-radius: 15px;
+        padding: 20px;
+        z-index: -1;
+        height: auto;
+        -webkit-transition-duration: .467s;
+             -o-transition-duration: .467s;
+                transition-duration: .467s;
+        -webkit-transition-timing-function: cubic-bezier(.33,1,.68,1);
+             -o-transition-timing-function: cubic-bezier(.33,1,.68,1);
+                transition-timing-function: cubic-bezier(.33,1,.68,1);
+        -webkit-transition-property: -webkit-transform;
+        transition-property: -webkit-transform;
+        -o-transition-property: transform;
+        transition-property: transform;
+        transition-property: transform, -webkit-transform;
+        -webkit-transform: translateY(-100vh);
+            -ms-transform: translateY(-100vh);
+                transform: translateY(-100vh);
+        will-change: transform;
+    }
+
+    &.active {
+        @include screen-lt("lg") {
+            z-index: 99;
+            overflow: auto;
+            -webkit-transform: translateY(0);
+                -ms-transform: translateY(0);
+                    transform: translateY(0);
+            -webkit-transition-duration: .467s;
+                 -o-transition-duration: .467s;
+                    transition-duration: .467s;
+            -webkit-transition-timing-function: cubic-bezier(.16,1,.3,1);
+                 -o-transition-timing-function: cubic-bezier(.16,1,.3,1);
+                    transition-timing-function: cubic-bezier(.16,1,.3,1);
+            -webkit-transition-property: -webkit-transform;
+            transition-property: -webkit-transform;
+            -o-transition-property: transform;
+            transition-property: transform;
+            transition-property: transform, -webkit-transform;
+        }
+    }
+    
+    & .navBtnContact {
+        background-color: $color-9;
+    }
+}
+
+.socialMobile {
+    display: none;
+
+    @include screen-lt("lg") {
+        display: block;
+    }
+}
+
+.burgerBtn {
+    background-color: transparent;
+    border: 1px solid $color-4;
+    width: 40px;
+    height: 40px;
+    display: none;
+    cursor: pointer;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    border-radius: 50%;
+    -webkit-column-gap: 5px;
+       -moz-column-gap: 5px;
+            column-gap: 5px;
+    margin-left: auto;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 100;
+    @include screen-lt("lg") {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+}
+
+.burgerDot {
+    border-radius: 50%;
+    width: 5px;
+    height: 5px;
+    background-color: $color-4;
+    position: relative;
+    z-index: 1000;
+    flex-shrink: 0;
 }

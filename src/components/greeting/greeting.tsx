@@ -13,7 +13,9 @@ const Greeting = () => {
                     <h1 className={styles.title_1}>Hello!</h1>
                     <p className={styles.text}>Меня зовут Диана и&#160;я&#160;Frontent-разработчик, работаю удаленно из&#160;Ростова-на-Дону</p>
                 </div>
-                <Social />
+                <div className={styles.socialDesktop}>
+                    <Social />
+                </div>
                 <Ball/>
 
             </div>
