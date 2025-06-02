@@ -1,5 +1,5 @@
-@import './../variables';
-@import './../mixins';
+@import '@/styles/variables';
+@import '@/styles/mixins';
 @import '@/styles/breakpoints.scss';
 
 .nav {
@@ -232,6 +232,7 @@
     height: 5px;
     background-color: $color-4;
     position: relative;
-    z-index: 1000;
-    flex-shrink: 0;
+    z-index: 100;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
 }

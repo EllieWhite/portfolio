@@ -1,4 +1,4 @@
-import styles from './downloadBtn.module.scss';
+import styles from '@/components/downloadBtn/downloadBtn.module.scss';
 
 interface DownloadBtnProps {
     href: string;

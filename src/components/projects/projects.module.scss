@@ -1,6 +1,6 @@
-@import './../variables';
-@import './../mixins';
-@import '../../styles/breakpoints.scss';
+@import '@/styles/variables';
+@import '@/styles/mixins';
+@import '@/styles/breakpoints.scss';
 
 .projects {
     padding-top: 108px;
@@ -14,9 +14,13 @@
 
     &:before {
         @include decore($content: true, $h: 15.3%, $w: 20.9%, $l: 10%,  $t: 26.4%, $brdr: 200px);
-        filter: blur(100px);
+        -webkit-filter: blur(100px);
+                filter: blur(100px);
+        background: -o-linear-gradient(177deg, rgba(245, 201, 116, 0.45) 0%, rgba(242, 55, 246, 0.45) 22.5%, rgba(246, 181, 55, 0.45) 22.51%, rgba(242, 55, 246, 0.45) 47.5%, rgba(246, 141, 255, 0.45) 100%);
         background: linear-gradient(273deg, rgba(245, 201, 116, 0.45) 0%, rgba(242, 55, 246, 0.45) 22.5%, rgba(246, 181, 55, 0.45) 22.51%, rgba(242, 55, 246, 0.45) 47.5%, rgba(246, 141, 255, 0.45) 100%);
-        transform: rotate(78deg);
+        -webkit-transform: rotate(78deg);
+            -ms-transform: rotate(78deg);
+                transform: rotate(78deg);
 
         @include screen-lt("md") {
             -webkit-filter: blur(30px);
@@ -26,10 +30,14 @@
 
     &:after {
         @include decore($content: true, $h: 13.3%, $w: 20.9%, $l: -9.6%,  $b: 2%, $brdr: 200px);
-        filter: blur(200px);
+        -webkit-filter: blur(200px);
+                filter: blur(200px);
+        background: -o-linear-gradient(177deg, rgba(3, 104, 255, 0.46) 0%, rgba(116, 55, 246, 0.76) 37.1%, rgba(246, 141, 255, 0) 100%);
         background: linear-gradient(273deg, rgba(3, 104, 255, 0.46) 0%, rgba(116, 55, 246, 0.76) 37.1%, rgba(246, 141, 255, 0) 100%);       
         will-change: transform;
-        transform: rotate(140deg);
+        -webkit-transform: rotate(140deg);
+            -ms-transform: rotate(140deg);
+                transform: rotate(140deg);
 
         @include screen-lt("md") {
             -webkit-filter: blur(30px);
@@ -43,7 +51,9 @@
     background: url(../../assets/dots.svg) top center/contain no-repeat;
     z-index: -1;
     opacity: 0.4;
-    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
 
     @include screen-lt("md") {
         width: 200px;

@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './socialElem.module.scss';
+import styles from '@/components/social/socialElem/socialElem.module.scss';
 
 interface SocialElemProps {
   href: string;

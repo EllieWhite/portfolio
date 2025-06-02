@@ -1,4 +1,4 @@
-import styles from './project.module.scss';
+import styles from '@/components/project/project.module.scss';
 import ArrowRight from '@/assets/next-right-arrow.svg';
 
 interface ProjectItem {

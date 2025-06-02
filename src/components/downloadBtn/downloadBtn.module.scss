@@ -1,4 +1,4 @@
-@import './../variables';
+@import '@/styles/variables';
 
 .text {
     font-size: 46px;
@@ -16,7 +16,7 @@
 
     &:before {
         content: '';
-        background: url(../../assets/download.svg) center/cover no-repeat;
+        background: url(@/assets/download.svg) center/cover no-repeat;
         width: 31px;
         height: 31px;
         display: block;

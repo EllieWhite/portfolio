@@ -1,6 +1,6 @@
-import styles from './greeting.module.scss';
-import Social from '../social/social';
-import Ball from '../ball/ball';
+import styles from '@/components/greeting/greeting.module.scss';
+import Social from '@/components/social/social';
+import Ball from '@/components/ball/ball';
 const Greeting = () => {
 
     return (

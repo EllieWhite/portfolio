@@ -1,8 +1,8 @@
-import SocialElem from "./socialElem/socialElem";
+import SocialElem from '@/components/social/socialElem/socialElem';
 import IconGit from '@/assets/git.svg';
 import IconTg from '@/assets/tg.svg';
 
-import styles from './social.module.scss';
+import styles from '@/components/social/social.module.scss';
 
 const SocialList = () => {
     const socialData = [
@@ -13,7 +13,7 @@ const SocialList = () => {
     return (
     <div className={styles.box}>
         {socialData.map((item, index) => (
-        <SocialElem key={index} href={item.href}>
+        <SocialElem key={index} href={item.href} className={styles.socialBtn}>
             {item.icon}
         </SocialElem>
         ))}

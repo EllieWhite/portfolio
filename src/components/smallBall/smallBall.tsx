@@ -1,4 +1,4 @@
-import styles from './smallBall.module.scss';
+import styles from '@/components/smallBall/smallBall.module.scss';
 
 interface SmallBallProps {
     className?: string

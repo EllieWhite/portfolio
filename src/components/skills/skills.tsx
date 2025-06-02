@@ -1,9 +1,4 @@
-import styles from './skills.module.scss';
-
-interface Skill {
-    title: string;
-    activeCount: number;
-  }
+import styles from '@/components/skills/skills.module.scss';
 
 const skills = [
     {

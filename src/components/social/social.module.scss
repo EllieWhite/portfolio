@@ -1,4 +1,6 @@
-@import '@/styles/breakpoints';
+@import '@/styles/variables';
+@import '@/styles/mixins';
+@import '@/styles/breakpoints.scss';
 
 .box {
     display: -webkit-box;
@@ -10,21 +12,31 @@
             flex-direction: column;
     row-gap: 20px;
     position: absolute;
-    right: 100px;
+    right: 50px;
     top: 50%;
     -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
             transform: translateY(-50%);
     z-index: 100;
 
-    @include screen-lt("xl") {
-        right: 60px;
-    }
-
     @include screen-lt("lg") {
-        flex-direction: row;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
         position: static;
-        column-gap: 30px;
-        transform: none;
+        -webkit-column-gap: 30px;
+           -moz-column-gap: 30px;
+                column-gap: 30px;
+        -webkit-transform: none;
+            -ms-transform: none;
+                transform: none;
+    }
+}
+
+.socialBtn {
+    color: $color-1;
+    @include screen-lt("lg") {
+        color: $color-5;
     }
 }

@@ -1,5 +1,5 @@
-@import './../variables';
-@import './../mixins';
+@import '@/styles/variables';
+@import '@/styles/mixins';
 @import '@/styles/breakpoints.scss';
 
 .about {
@@ -185,5 +185,5 @@
         top: 0;
         margin-top: 50px;
         margin-left: 0;
-      }
+    }
 }

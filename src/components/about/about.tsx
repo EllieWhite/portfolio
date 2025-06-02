@@ -1,9 +1,7 @@
-import styles from './about.module.scss';
-
+import styles from '@/components/about/about.module.scss';
 import Laptop from '@/assets/laptop.png';
-
-import SmallBall from '../smallBall/smallBall';
-import SocialElem from '../social/socialElem/socialElem';
+import SmallBall from '@/components/smallBall/smallBall';
+import SocialElem from '@/components/social/socialElem/socialElem';
 const About = () => {
     return (
         <section className={styles.about}>

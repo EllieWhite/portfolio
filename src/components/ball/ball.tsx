@@ -1,6 +1,6 @@
-import styles from './ball.module.scss';
-import SmallBall from '../smallBall/smallBall';
-import DownloadBtn from '../downloadBtn/downloadBtn';
+import styles from '@/components/ball/ball.module.scss';
+import SmallBall from '@/components/smallBall/smallBall';
+import DownloadBtn from '@/components/downloadBtn/downloadBtn';
 import CV from '@/assets/pdf/cv.pdf';
 import Avatar from '@/assets/avatar.png';
 

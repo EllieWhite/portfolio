@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import styles from './header.module.scss';
-import SocialElem from '../social/socialElem/socialElem';
-import Social from '../social/social';
+import styles from '@/components/header/header.module.scss';
+import SocialElem from '@/components/social/socialElem/socialElem';
+import Social from '@/components/social/social';
 
 type Section = {
   id: string;

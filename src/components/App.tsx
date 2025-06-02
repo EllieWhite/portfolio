@@ -1,10 +1,10 @@
 import React, { useRef, useState, useEffect } from 'react';
 import './App.scss';
-import Header from './header/header';
-import Greeting from "./greeting/greeting";
-import About from "./about/about";
-import Skills from './skills/skills';
-import Projects from './projects/projects';
+import Header from '@/components/header/header';
+import Greeting from "@/components/greeting/greeting";
+import About from "@/components/about/about";
+import Skills from '@/components/skills/skills';
+import Projects from '@/components/projects/projects';
 
 const sections = [
   { id: 'greeting', title: 'ГЛАВНАЯ' },
