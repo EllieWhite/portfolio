@@ -30,7 +30,7 @@ export function buildPlugins({mode, paths, platform}: BuildOptions): Configurati
         }))
         plugins.push(new webpack.ProvidePlugin({
             "React": "react",
-        }))
+         }))
         plugins.push(new BundleAnalyzerPlugin())
     }
 
