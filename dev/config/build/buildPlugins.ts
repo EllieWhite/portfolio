@@ -28,6 +28,9 @@ export function buildPlugins({mode, paths, platform}: BuildOptions): Configurati
             filename: 'css/[name].[contenthash:8].css',
             chunkFilename: 'css/[name].[contenthash:8].css'
         }))
+        plugins.push(new webpack.ProvidePlugin({
+            "React": "react",
+        }))
         plugins.push(new BundleAnalyzerPlugin())
     }
 
