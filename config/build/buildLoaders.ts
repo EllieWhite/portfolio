@@ -15,8 +15,12 @@ export function buildLoaders(options: BuildOptions): ModuleOptions['rules'] {
     }
 
     const assetLoader = {
-        test: /\.(png|jpg|jpeg|webp|gif|ico)$/i,
+        test: /\.(png|jpg|jpeg|webp|gif|ico|pdf)$/i,
         type: 'asset/resource',
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]'
+        }
     }
 
     const fontLoader = {
