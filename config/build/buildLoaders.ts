@@ -81,7 +81,7 @@ export function buildLoaders(options: BuildOptions): ModuleOptions['rules'] {
       }
 
       const videoLoader = {
-        test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)$/,
+        test: /\.(mp4|webm|ogg|mp3|mp4|webm|wav|flac|aac)$/,
         type: 'asset/resource',
         generator: {
           filename: 'static/media/[name].[hash][ext]'
