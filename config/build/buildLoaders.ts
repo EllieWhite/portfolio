@@ -73,8 +73,8 @@ export function buildLoaders(options: BuildOptions): ModuleOptions['rules'] {
             loader: 'file-loader',
             options: {
               name: '[name].[ext]',
-              outputPath: 'assets/pdf/',
-              publicPath: '/static/pdf/[name].[hash][ext]',
+              outputPath: 'static/pdf/',
+              publicPath: '/assets/pdf/',
             },
           },
         ],
