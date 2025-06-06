@@ -15,12 +15,8 @@ export function buildLoaders(options: BuildOptions): ModuleOptions['rules'] {
     }
 
     const assetLoader = {
-        test: /\.(png|jpg|jpeg|webp|gif|ico|pdf)$/i,
+        test: /\.(png|jpg|jpeg|webp|gif|ico)$/i,
         type: 'asset/resource',
-        loader: 'file-loader',
-        options: {
-          name: '[name].[ext]'
-        }
     }
 
     const fontLoader = {
@@ -76,16 +72,14 @@ export function buildLoaders(options: BuildOptions): ModuleOptions['rules'] {
           {
             loader: 'file-loader',
             options: {
-              name: '[name].[ext]',
-              outputPath: 'static/pdf/',
-              publicPath: '/static/pdf/[name].[hash][ext]',
+              name: '[name].[ext]'
             },
           },
         ],
       }
 
       const videoLoader = {
-        test: /\.(mp4|webm|ogg|mp3|mp4|webm|wav|flac|aac)$/,
+        test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)$/,
         type: 'asset/resource',
         generator: {
           filename: 'static/media/[name].[hash][ext]'
