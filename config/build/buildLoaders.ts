@@ -74,7 +74,7 @@ export function buildLoaders(options: BuildOptions): ModuleOptions['rules'] {
             options: {
               name: '[name].[ext]',
               outputPath: 'assets/pdf/',
-              publicPath: '/assets/pdf/',
+              publicPath: '/static/pdf/[name].[hash][ext]',
             },
           },
         ],
