@@ -17,6 +17,7 @@ $breakpoints-to: (
         'xl': 1339px,
 ) !default;
 
+
 // Точное совпадение
 @mixin screen-eq($breakpoint) {
   @if $breakpoint == 'xxl' {
