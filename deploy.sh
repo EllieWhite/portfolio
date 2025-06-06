@@ -1,6 +1,5 @@
 npm run build:prod
 git checkout "release"
-rm -rf *
 git merge main
 rm -rf src/ config/ src/ pages/ styles/ *.ts package-lock.json package.json tsconfig.json webpack.config.ts 
 mv build/* .
